@@ -1,9 +1,12 @@
-(function (window) {  
-    var helloSpeaker = {};
-    var speakWord = "Hello";
+(function (window) {
+  var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
-    helloSpeaker.speak = function (names) {
-      console.log(speakWord + " " + names);
+  for (var i in names) {
+    var firstLetter = names[i].charAt(0).toLowerCase();
+    if (firstLetter === 'j') {
+      byeSpeaker.speak(names[i]);
+    } else {
+      helloSpeaker.speak(names[i]);
     }
-        window.helloSpeaker = helloSpeaker;
-    })(window);
+  }
+})(window);
